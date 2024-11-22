@@ -1,15 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PrincipalController;
 
-Route::get('/', function () {
+
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
-Route::get('/inicio', function () {
-    return view('vistas.inicio');
-});
 
-Route::get('/show', function () {
-    return view('vistas.show');
-});
+Route::get('/', [PrincipalController::class, 'login']);
+Route::post('/inicio', [PrincipalController::class, 'validador'])->name('login.validate');
+Route::get('/inicio', [PrincipalController::class, 'inicio']);
+Route::get('/show', [PrincipalController::class, 'show']);
