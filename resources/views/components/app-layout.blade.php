@@ -62,7 +62,15 @@
         #cellPaiChart{
             height: 160px;
         }
-
+        .top-right {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+        #myButton {
+            padding: 10px 20px;
+            font-size: 14px;
+        }
     </style>
 </head>
 
@@ -98,6 +106,12 @@
                     </a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
+            </div>
+            <div class="top-right">
+                <form action="{{ route('logout') }}" method="POST" style="display:inline;">
+                    @csrf
+                    <button type="submit" class="btn btn-outline-primary btn-sm">Cerrar Sesión</button>
+                </form>
             </div>
         </header>
         <!-- /#header -->
