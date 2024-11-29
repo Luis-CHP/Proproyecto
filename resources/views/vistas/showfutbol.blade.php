@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <a href="{{route('futbol.index')}}">Volver a cursos</a>
+<a href="{{ route('futbol.index', ['categoria' => $futbol->categoria]) }}">Volver</a>
     <h1>Titulo: {{$futbol->categoria}}</h1>
     
     <p>

@@ -30,7 +30,6 @@ class FutbolController extends Controller
             return redirect()->route('futbol.index', ['categoria' => 'ropa']);
     }
 }
-
     
     public function create (){
         return view ('plan.create');;
@@ -51,7 +50,7 @@ class FutbolController extends Controller
     public function show ($futbol){
         $futbol = Producto::find($futbol);
         
-        return view ('vistas.show', compact('futbol'));
+        return view ('vistas.showfutbol', compact('futbol'));
     }
 
     public function edit ($futbol){

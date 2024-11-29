@@ -6,8 +6,8 @@
 <ul>
 @foreach ($productos as $producto)
     <li>
-        <a href="{{ route('futbol.show', $producto) }}">
-            {{ $producto->nombre }} <!--Aqui lo puedo cambiar para que se muestre lo que quiero-->
+        <a href="{{ route('futbol.show', ['futbol' => $producto->id, 'categoria' => request()->categoria]) }}">
+            {{ $producto->nombre }}
         </a>
     </li>
 @endforeach
