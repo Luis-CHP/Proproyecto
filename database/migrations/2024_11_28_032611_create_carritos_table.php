@@ -11,21 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('compras', function (Blueprint $table) {
-            $table->increments('id_compra');
-            $table->unsignedBigInteger('id_user');
-            $table->timestamp('date');
-            $table->float('amount');
-            $table->foreign('id_user')->references('id')->on('users')->OnDelete('cascade')->onUpdate('cascade');
+        Schema::create('carritos', function (Blueprint $table) {
+            $table->id(); 
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+    
+            // Relación con usuarios
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
-
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('compras');
+        Schema::dropIfExists('carritos');
     }
 };

@@ -44,9 +44,9 @@ class PrincipalController extends Controller
         return view("vistas.inicio");
     }
     
-    public function show(){
+    /*public function show(){
         return view("vistas.show");
-    }
+    }*/
 
     public function useradd(Request $request)
     {
