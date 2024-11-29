@@ -32,7 +32,7 @@
         <div class="container">
             <div class="login-content">
                 <div class="login-logo">
-                    <img class="align-content" src="images/logo.jpg" alt="" width="200" height="auto">
+                    <img class="align-content" src="images/milogo.jpg" alt="" width="250" height="auto">
                 </div>
                 <div class="login-form">
                     <form action="/agregar" method="POST">

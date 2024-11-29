@@ -16,7 +16,7 @@ class ProductoFactory extends Factory
             'descripcion' => $this->faker->sentence, // Oración aleatoria
             'precio' => $this->faker->randomFloat(2, 10, 1000), // Precio entre 10 y 1000
             'categoria' => $this->faker->randomElement(['ropa', 'accesorios', 'equipamiento']), // Categorías posibles
-            'deporte' => $this->faker->randomElement(['fútbol', 'básquetbol', 'tenis', 'natación']), // Deportes posibles
+            'deporte' => $this->faker->randomElement(['futbol', 'basquetbol', 'beisbol', ]), // Deportes posibles
         ];
     }
 }

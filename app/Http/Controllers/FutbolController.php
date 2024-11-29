@@ -7,14 +7,31 @@ use Illuminate\Http\Request;
 
 class FutbolController extends Controller
 {
-    public function index (){
-        $futbol = Producto::orderby('id','desc')
-                                ->paginate(10);
-        //return $futbol;
-        
-        return view ('vistas.index', compact ('futbol'));
-    }
+    
+    public function index(Request $request)
+{
+    
+    $categoria = $request->input('categoria', 'ropa');
 
+    $productos = Producto::where('deporte', 'futbol')
+                        ->where('categoria', $categoria)
+                        ->paginate(4)
+                        ->appends(['categoria' => $categoria]);
+
+    switch ($categoria) {
+        case 'ropa':
+            return view('vistas.futbol.ropa', compact('productos'));
+        case 'equipamiento':
+            return view('vistas.futbol.equipamiento', compact('productos'));
+        case 'accesorios':
+            return view('vistas.futbol.accesorios', compact('productos'));
+        default:
+            
+            return redirect()->route('futbol.index', ['categoria' => 'ropa']);
+    }
+}
+
+    
     public function create (){
         return view ('plan.create');;
     }

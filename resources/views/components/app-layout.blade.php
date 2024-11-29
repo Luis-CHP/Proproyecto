@@ -90,10 +90,17 @@
                             <i class="menu-icon fa fa-futbol-o"></i> Futbol
                         </a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-tshirt"></i><a href="/futbol">Ropa</a></li>
-                            <li><i class="menu-icon fa fa-shield-alt"></i><a href="/show">Equipamiento</a></li>
-                            <li><i class="menu-icon fa fa-futbol-o"></i><a href="/show">Accesorios</a></li>
+                            <li><i class="menu-icon fa fa-tshirt"></i>
+                                <a href="{{ route('futbol.index', ['categoria' => 'ropa']) }}">Ropa</a>
+                            </li>
+                            <li><i class="menu-icon fa fa-shield-alt"></i>
+                                <a href="{{ route('futbol.index', ['categoria' => 'equipamiento']) }}">Equipamiento</a>
+                            </li>
+                            <li><i class="menu-icon fa fa-futbol-o"></i>
+                                <a href="{{ route('futbol.index', ['categoria' => 'accesorios']) }}">Accesorios</a>
+                            </li>
                         </ul>
+                        
                     
                     </li>
                     <li class="menu-item-has-children dropdown">
@@ -148,7 +155,7 @@
             <div class="top-left">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="./inicio">
-                        <img src="{{ asset('images/logo.jpg') }}" alt="Logo" width="75" height="auto">
+                        <img src="{{ asset('images/milogo.jpg') }}" alt="Logo" width="75" height="auto">
                     </a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
