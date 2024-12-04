@@ -51,7 +51,8 @@ class CarritoController extends Controller
         }
 
         // Redirigir con un mensaje de éxito
-        return redirect()->route('carrito.index')->with('mensaje', 'Producto agregado al carrito.');
+       return redirect()->route('futbol.show', ['futbol' => $producto->id])->with('mensaje', 'Producto agregado al carrito.');
+
     }
 
     /**

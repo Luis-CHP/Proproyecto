@@ -32,4 +32,11 @@
     <button type="submit" class="btn btn-primary">Agregar al carrito</button>
 </form>
 
+@if(session('mensaje'))
+    <div class="alert alert-success">
+        {{ session('mensaje') }}
+    </div>
+@endif
+
+
 @endsection
