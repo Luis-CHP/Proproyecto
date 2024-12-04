@@ -1,0 +1,43 @@
+SET @contador_ropa = 0;
+SET @contador_equipamiento = 0;
+SET @contador_accesorios = 0;
+ 
+UPDATE productos
+SET nombre = CASE
+    WHEN deporte = 'beisbol' AND categoria = 'ropa' THEN 
+        CONCAT('ropa_beisbol_', (@contador_ropa := @contador_ropa + 1))
+    WHEN deporte = 'beisbol' AND categoria = 'equipamiento' THEN 
+        CONCAT('equipamiento_beisbol_', (@contador_equipamiento := @contador_equipamiento + 1))
+    WHEN deporte = 'beisbol' AND categoria = 'accesorios' THEN 
+        CONCAT('accesorios_beisbol_', (@contador_accesorios := @contador_accesorios + 1))
+    ELSE nombre
+END;
+
+SET @contador_ropa = 0;
+SET @contador_equipamiento = 0;
+SET @contador_accesorios = 0;
+ 
+UPDATE productos
+SET nombre = CASE
+    WHEN deporte = 'futbol' AND categoria = 'ropa' THEN 
+        CONCAT('ropa_futbol_', (@contador_ropa := @contador_ropa + 1))
+    WHEN deporte = 'futbol' AND categoria = 'equipamiento' THEN 
+        CONCAT('equipamiento_futbol_', (@contador_equipamiento := @contador_equipamiento + 1))
+    WHEN deporte = 'futbol' AND categoria = 'accesorios' THEN 
+        CONCAT('accesorios_futbol_', (@contador_accesorios := @contador_accesorios + 1))
+    ELSE nombre
+END;
+
+
+UPDATE productos
+SET nombre = CASE
+    WHEN deporte = 'basquetbol' AND categoria = 'ropa' THEN 
+        CONCAT('ropa_basquetbol_', (@contador_ropa := @contador_ropa + 1))
+    WHEN deporte = 'basquetbol' AND categoria = 'equipamiento' THEN 
+        CONCAT('equipamiento_futbol_', (@contador_equipamiento := @contador_equipamiento + 1))
+    WHEN deporte = 'basquetbol' AND categoria = 'accesorios' THEN 
+        CONCAT('accesorios_basquetbol_', (@contador_accesorios := @contador_accesorios + 1))
+    ELSE nombre
+END;
+
+

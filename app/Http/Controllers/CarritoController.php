@@ -17,7 +17,7 @@ class CarritoController extends Controller
     {
         // Verificar si el usuario está autenticado
         if (!Auth::check()) {
-            return redirect()->route('login')->with('error', 'Necesitas iniciar sesión para agregar productos al carrito.');
+            return redirect()->route('logout')->with('error', 'Necesitas iniciar sesión para agregar productos al carrito.');
         }
 
         // Validación de los datos del formulario
