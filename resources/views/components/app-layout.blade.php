@@ -125,7 +125,7 @@
                     </li>
                     <li class="menu-title">Carrito</li><!-- /.menu-title -->
                     <li class="menu-item">
-                        <a href="/show"> <i class="menu-icon fa fa-shopping-cart"></i> Ver Carrito</a>
+                        <a href="/carrito"> <i class="menu-icon fa fa-shopping-cart"></i> Ver Carrito</a>
                     </li>
                     <li class="menu-title">Productos más vendidos</li><!-- /.menu-title -->
                     <li class="menu-item">

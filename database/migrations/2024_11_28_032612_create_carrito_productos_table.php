@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('carrito_id');
             $table->unsignedBigInteger('producto_id');
+            $table->integer('cantidad')->default(1);  // Campo para la cantidad del producto
             $table->timestamps();
     
             // Definir claves foráneas

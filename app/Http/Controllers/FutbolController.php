@@ -31,11 +31,12 @@ class FutbolController extends Controller
     }
 }
     
-    public function create (){
+ /*   public function create (){
         return view ('plan.create');;
     }
+*/
 
-    public function store (Request $request){
+/*    public function store (Request $request){
         $futbol =new Producto();
         $futbol->title=$request->title;
         $futbol->category=$request->category;
@@ -45,15 +46,22 @@ class FutbolController extends Controller
 
         return redirect('/cursos');
     }
+*/
 
-
-    public function show ($futbol){
-        $futbol = Producto::find($futbol);
-        
-        return view ('vistas.showfutbol', compact('futbol'));
+    public function show(Request $request, $futbol)
+    {   
+    $producto = Producto::find($futbol);
+    
+    if (!$producto) {
+        return redirect()->route('futbol.index')->with('error', 'Producto no encontrado.');
     }
 
-    public function edit ($futbol){
+    // Mostrar los detalles del producto en la vista 'showfutbol'
+    return view('vistas.showfutbol', compact('producto'));
+    }  
+
+
+   /* public function edit ($futbol){
         $futbol = Producto::find($futbol);
         return view ('plan.edit', compact('curso'));
     }
@@ -74,5 +82,5 @@ class FutbolController extends Controller
         $futbol = Producto::find($futbol);
         $futbol->delete();
         return redirect ("/cursos");
-    }
+    }*/
 }
