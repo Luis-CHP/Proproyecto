@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
+            $table->string('image')->nullable();
             $table->text('descripcion')->nullable();
             $table->decimal('precio', 8, 2);
             $table->string('categoria'); // Ejemplo: ropa, equipamiento, accesorios
