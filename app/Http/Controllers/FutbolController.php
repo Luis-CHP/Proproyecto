@@ -52,12 +52,12 @@ class FutbolController extends Controller
     {   
     $producto = Producto::find($futbol);
     
-    if (!$producto) {
+    if (!$producto) {   
         return redirect()->route('futbol.index')->with('error', 'Producto no encontrado.');
     }
 
     // Mostrar los detalles del producto en la vista 'showfutbol'
-    return view('vistas.showfutbol', compact('producto'));
+    return view('vistas.show', compact('producto'));
     }  
 
 

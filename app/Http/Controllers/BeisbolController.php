@@ -56,7 +56,7 @@ class BeisbolController extends Controller
         }
     
         // Mostrar los detalles del producto en la vista 'showfutbol'
-        return view('vistas.showfutbol', compact('producto'));
+        return view('vistas.show', compact('producto'));
         }  
     
     
