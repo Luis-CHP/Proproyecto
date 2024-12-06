@@ -26,10 +26,12 @@ Route::post('/logout', [PrincipalController::class, 'logout'])->name('logout');
 
 Route::resource('futbol', FutbolController::class);
 
+Route::resource('beisbol', BeisbolController::class);
+
 Route::middleware(['auth'])->group(function () {
     Route::resource('carrito', CarritoController::class);
 });
-
+//noe es gay 
 
 /*
 

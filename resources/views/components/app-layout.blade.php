@@ -108,9 +108,15 @@
                             <i class="menu-icon fa fa-baseball-ball"></i> Beisbol
                         </a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-tshirt"></i><a href="/beisbol">Ropa</a></li>
-                            <li><i class="menu-icon fa fa-shield-alt"></i><a href="/show">Equipamiento</a></li>
-                            <li><i class="menu-icon fa fa-baseball-ball"></i><a href="/show">Accesorios</a></li>
+                            <li><i class="menu-icon fa fa-tshirt"></i>
+                                <a href="{{ route('beisbol.index', ['categoria' => 'ropa']) }}">Ropa</a>
+                            </li>
+                            <li><i class="menu-icon fa fa-shield-alt"></i>
+                                <a href="{{ route('beisbol.index', ['categoria' => 'equipamiento']) }}">Equipamiento</a>
+                            </li>
+                            <li><i class="menu-icon fa fa-futbol-o"></i>
+                                <a href="{{ route('beisbol.index', ['categoria' => 'accesorios']) }}">Accesorios</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
