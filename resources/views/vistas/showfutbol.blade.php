@@ -2,8 +2,8 @@
 
 @section('content')
 
-<!-- Enlace para volver a la lista de productos -->
-<a href="{{ route('futbol.index', ['categoria' => $producto->categoria]) }}">Volver</a>
+<!-- Enlace para volver a la lista de productos, adaptado dependiendo de la ruta -->
+<a href="{{ route(request()->segment(1) . '.index', ['categoria' => $producto->categoria]) }}">Volver</a>
 
 <h1>{{ $producto->nombre}}</h1> <!-- Mostrar nombre del producto -->
 

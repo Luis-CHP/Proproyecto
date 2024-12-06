@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>Bienvenido a la página de Equipamiento</h1>
+<h1>Bienvenido a la página de Equipamiento de beisbol</h1>
 <ul>
 @foreach ($productos as $producto)
     <li>
