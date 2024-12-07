@@ -8,7 +8,7 @@
 <h1>{{ $producto->nombre}}</h1> <!-- Mostrar nombre del producto -->
 
 <!-- Mostrar imagen del producto -->
-<img src="{{ asset('storage/'.$producto->image) }}" alt="{{ $producto->name }}" class="img-fluid">
+<img src="{{ asset($producto->image) }}" alt="{{ $producto->nombre }}" class="img-fluid">
 
 <!-- Mostrar categoría -->
 <p><b>Categoría:</b> {{$producto->categoria}}</p>

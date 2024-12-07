@@ -55,7 +55,8 @@ class FutbolController extends Controller
     if (!$producto) {   
         return redirect()->route('futbol.index')->with('error', 'Producto no encontrado.');
     }
-
+    $rutaImagen = 'images/futbol/' . $producto->categoria . '/' . $producto->image;
+    
     // Mostrar los detalles del producto en la vista 'showfutbol'
     return view('vistas.show', compact('producto'));
     }  

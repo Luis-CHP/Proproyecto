@@ -54,7 +54,7 @@ class BeisbolController extends Controller
         if (!$producto) {
             return redirect()->route('beisbol.index')->with('error', 'Producto no encontrado.');
         }
-    
+        $rutaImagen = 'images/beisbol/' . $producto->categoria . '/' . $producto->image;
         // Mostrar los detalles del producto en la vista 'showfutbol'
         return view('vistas.show', compact('producto'));
         }  
