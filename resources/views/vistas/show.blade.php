@@ -23,6 +23,8 @@
 <form action="{{ route('carrito.store') }}" method="POST">
     @csrf
     <input type="hidden" name="producto_id" value="{{ $producto->id }}">
+    <input type="hidden" name="categoria" value="{{ request()->categoria }}">
+
 
     <div class="form-group">
         <label for="cantidad">Cantidad:</label>
@@ -31,6 +33,7 @@
 
     <button type="submit" class="btn btn-primary">Agregar al carrito</button>
 </form>
+
 
 @if(session('mensaje'))
     <div class="alert alert-success">

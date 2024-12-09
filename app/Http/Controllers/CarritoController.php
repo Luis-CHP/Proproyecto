@@ -50,8 +50,9 @@ class CarritoController extends Controller
             ]);
         }
 
-        // Redirigir con un mensaje de éxito
-       return redirect()->route('futbol.show', ['futbol' => $producto->id])->with('mensaje', 'Producto agregado al carrito.');
+
+ // Construir la ruta dinámica utilizando el deporte
+ return back()->with('mensaje', 'Producto agregado al carrito.');
 
     }
 

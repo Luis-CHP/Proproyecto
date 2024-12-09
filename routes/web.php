@@ -28,8 +28,11 @@ Route::resource('futbol', FutbolController::class);
 
 Route::resource('beisbol', BeisbolController::class);
 
+Route::resource('basquetbol', BeisbolController::class);
+
 Route::middleware(['auth'])->group(function () {
-    Route::resource('carrito', CarritoController::class);
+    Route::resource('carrito', CarritoController::class)->except(['show']);
+
 });
 //
 
