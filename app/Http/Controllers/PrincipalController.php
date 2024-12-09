@@ -43,6 +43,11 @@ class PrincipalController extends Controller
     public function inicio(){
         return view("vistas.inicio");
     }
+
+    public function contacto(){
+        return view("vistas.contacto");
+    }
+
     
     /*public function show(){
         return view("vistas.show");
